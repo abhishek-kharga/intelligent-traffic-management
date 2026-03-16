@@ -94,7 +94,7 @@ const Settings = () => {
           user_id: user.id,
           name: newScenario.name,
           description: newScenario.description,
-          scenario_data: scenarioData
+          config: scenarioData
         });
 
       if (error) throw error;
