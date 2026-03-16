@@ -248,6 +248,10 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="flex items-center space-x-4">
+            <Button variant="default" onClick={() => navigate("/monitoring")}>
+              <Radio className="h-4 w-4 mr-2" />
+              Live Monitor
+            </Button>
             <Button variant="outline" onClick={() => navigate("/settings")}>
               <Settings className="h-4 w-4 mr-2" />
               Settings
