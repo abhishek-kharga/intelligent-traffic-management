@@ -217,10 +217,10 @@ const Dashboard = () => {
 
   const getSignalColor = (state: string) => {
     switch (state) {
-      case 'green': return 'bg-green-500';
-      case 'yellow': return 'bg-yellow-500';
-      case 'red': return 'bg-red-500';
-      default: return 'bg-gray-500';
+      case 'green': return 'bg-signal-green';
+      case 'yellow': return 'bg-signal-yellow';
+      case 'red': return 'bg-signal-red';
+      default: return 'bg-signal-muted';
     }
   };
 
