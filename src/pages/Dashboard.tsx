@@ -18,7 +18,8 @@ import {
   CheckCircle, 
   XCircle,
   Clock,
-  TrendingUp
+  TrendingUp,
+  Radio
 } from "lucide-react";
 
 interface Intersection {
