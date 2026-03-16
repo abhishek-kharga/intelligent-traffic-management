@@ -14,7 +14,154 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      ai_suggestions: {
+        Row: {
+          created_at: string
+          data: Json | null
+          description: string
+          id: string
+          intersection_id: string
+          status: string
+          suggestion_type: string
+        }
+        Insert: {
+          created_at?: string
+          data?: Json | null
+          description: string
+          id?: string
+          intersection_id: string
+          status?: string
+          suggestion_type: string
+        }
+        Update: {
+          created_at?: string
+          data?: Json | null
+          description?: string
+          id?: string
+          intersection_id?: string
+          status?: string
+          suggestion_type?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "ai_suggestions_intersection_id_fkey"
+            columns: ["intersection_id"]
+            isOneToOne: false
+            referencedRelation: "intersections"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      intersections: {
+        Row: {
+          created_at: string
+          current_signal_state: string
+          id: string
+          latitude: number
+          longitude: number
+          name: string
+        }
+        Insert: {
+          created_at?: string
+          current_signal_state?: string
+          id?: string
+          latitude?: number
+          longitude?: number
+          name: string
+        }
+        Update: {
+          created_at?: string
+          current_signal_state?: string
+          id?: string
+          latitude?: number
+          longitude?: number
+          name?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          created_at: string
+          full_name: string | null
+          id: string
+          updated_at: string
+        }
+        Insert: {
+          avatar_url?: string | null
+          created_at?: string
+          full_name?: string | null
+          id: string
+          updated_at?: string
+        }
+        Update: {
+          avatar_url?: string | null
+          created_at?: string
+          full_name?: string | null
+          id?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      traffic_data: {
+        Row: {
+          average_speed: number
+          id: string
+          intersection_id: string
+          timestamp: string
+          vehicle_count: number
+        }
+        Insert: {
+          average_speed?: number
+          id?: string
+          intersection_id: string
+          timestamp?: string
+          vehicle_count?: number
+        }
+        Update: {
+          average_speed?: number
+          id?: string
+          intersection_id?: string
+          timestamp?: string
+          vehicle_count?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "traffic_data_intersection_id_fkey"
+            columns: ["intersection_id"]
+            isOneToOne: false
+            referencedRelation: "intersections"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      traffic_scenarios: {
+        Row: {
+          config: Json | null
+          created_at: string
+          description: string | null
+          id: string
+          name: string
+          user_id: string
+        }
+        Insert: {
+          config?: Json | null
+          created_at?: string
+          description?: string | null
+          id?: string
+          name: string
+          user_id: string
+        }
+        Update: {
+          config?: Json | null
+          created_at?: string
+          description?: string | null
+          id?: string
+          name?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
