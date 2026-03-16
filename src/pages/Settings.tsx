@@ -286,15 +286,15 @@ const Settings = () => {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                           <div className="flex items-center space-x-2">
                             <Users className="h-4 w-4 text-primary" />
-                            <span>Vehicles: {scenario.scenario_data?.vehicle_count || 0}</span>
+                            <span>Vehicles: {scenario.config?.vehicle_count || 0}</span>
                           </div>
                           <div className="flex items-center space-x-2">
                             <TrendingUp className="h-4 w-4 text-primary" />
-                            <span>Speed: {scenario.scenario_data?.average_speed || 0} mph</span>
+                            <span>Speed: {scenario.config?.average_speed || 0} mph</span>
                           </div>
                           <div className="flex items-center space-x-2">
                             <Clock className="h-4 w-4 text-primary" />
-                            <span>Peak: {scenario.scenario_data?.peak_hours || 'N/A'}</span>
+                            <span>Peak: {scenario.config?.peak_hours || 'N/A'}</span>
                           </div>
                         </div>
                       </div>
