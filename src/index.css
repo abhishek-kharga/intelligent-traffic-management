@@ -38,6 +38,10 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
 
+    --signal-green: 142 76% 36%;
+    --signal-yellow: 45 93% 47%;
+    --signal-red: 0 84% 60%;
+    --signal-muted: 210 10% 58%;
     --sidebar-background: 0 0% 98%;
 
     --sidebar-foreground: 240 5.3% 26.1%;
