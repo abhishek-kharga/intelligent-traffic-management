@@ -23,8 +23,8 @@ import {
 interface TrafficScenario {
   id: string;
   name: string;
-  description: string;
-  scenario_data: any;
+  description: string | null;
+  config: any;
   created_at: string;
 }
 
