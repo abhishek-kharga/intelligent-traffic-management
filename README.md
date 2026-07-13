@@ -74,3 +74,7 @@ Smart city integration
 Weather aware signals
 
 Edge AI deployment
+
+
+Live Demo 
+ http://smarttrafficai.lovable.app/
